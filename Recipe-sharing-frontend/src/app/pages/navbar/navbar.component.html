@@ -1,0 +1,16 @@
+<p>
+    <mat-toolbar class="flex items-center justify-between">
+        <div>
+            <span>My App</span>
+        </div>
+        <div>
+            <span class="example-spacer"></span>
+            <button mat-button (click)="handleLogout()">
+                {{user?.fullName}}
+            </button>
+            <mat-icon 
+                class="align-middle mt-1 cursor-pointer" 
+                (click)="handleLogout()">exit_to_app</mat-icon>
+        </div>
+    </mat-toolbar>
+</p>

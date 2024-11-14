@@ -1,0 +1,34 @@
+<mat-card class="example-card  h-[500px]" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title style="color: #fafafa;">{{recipe.user.fullName}}</mat-card-title>
+      <mat-card-subtitle>{{recipe.user.fullName}}</mat-card-subtitle>
+    </mat-card-header>
+    <img class="h-[270px] w-full object-cover" mat-card-image [src]="recipe.image" alt="Photo of a Shiba Inu">
+    <mat-card-content class="flex-1">
+      <p style="color: #fafafa;">
+       {{recipe.description}}
+      </p>
+    </mat-card-content> 
+    <mat-card-actions class="flex justify-between">
+      <div>
+        <button (click)="handleLikeRecipe()" mat-icon-button aria-label="Like this recipe">
+          <mat-icon [ngStyle]="{ color: liked ? 'red' : 'white' }">favorite</mat-icon>
+        </button>
+        
+        
+          <button (click)="handleOpenEditRecipeForm()" mat-icon-button aria-label="Example icon button with a home icon">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button (click)="openShareDialog()" mat-icon-button aria-label="Share">
+            <mat-icon>share</mat-icon>
+          </button>
+          
+      </div>
+      <div>
+        <button (click)="handleDeleteRecipe()" mat-icon-button aria-label="Example icon button with a home icon">
+            <mat-icon>delete</mat-icon>
+          </button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
